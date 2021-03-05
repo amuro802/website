@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+/*헤더*/
+
+#header{
+    margin: 20px 50px; /*스크롤을 생기지 않게 0을 주고 양옆에 50픽셀*/
+    position: relative;
+    text-align: center;   /*인라인을 중앙정렬 지금은 헤더에 줘도 된다 다른애들은 피해볼 애가 없다*/
+    height: 43px;
+    line-height: 43px;
+}
+
+#header h1{
+
+    position: absolute;
+    width: 110px;    /*위드값 헤이트값은 포토샵*/
+    height: 43px;
+    background: url(../images/sp_com.png) no-repeat -300px -5px; /*위치값*/
+    text-indent: -9999px;
+}
+
+#header h1 a{
+    display: block;  /*텍스트인덴트로 에이태그까지 날려버려서 블락을 줘서 다시 원상복귀*/
+}
+
+.gnb{
+    display: inline-block;   /*cf를 안줘도 되는방법이다*/
+    
+}
+.gnb li{
+    float: left;
+    margin: 0 20px ;
+}
+
+.gnb li:hover a{
+    border-bottom: 3px solid #2d5b79;  /*li를 터치하면 선을 만든다*/
+    color: blue; 
+}
+
+.gnb li a{
+    display: block;    /*a태그한테 블락을 줘야지 li만큼 영역이 잡힌다*/
+}
+
+.util{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+}
+.util li{
+    float: left;
+}
+
+.util li::after{
+    content: "";
+    display: inline-block;
+    height: 8px;
+    width: 1px;
+    background: #666;
+    margin: 0 5px;
+}
+.util li:last-child::after{display: none;}
+
+.util li a{
+    
+}
+
+/*푸터*/
+
+#footer{
+    color: #fff;
+    font-size: 13px;
+}
+
+.fTop{
+    background: #383f43;
+    line-height: 40px;      /*한줄이니까 정렬*/
+    padding: 10px 0;    /*f탑부분을 늘리고 중앙정렬*/
+}
+
+.fMenu{float: left;}        /*부모한테 플루트를 줘서 cf를 안줘도된다*/
+.fMenu li{
+    float: left;           /*부모한테 플루트를 줘서 cf를 안줘도된다*/
+}
+.fMenu li::before{
+    content: "";
+    display: inline-block;   /*인라인블락을해야지 옆에 달라붙어*/
+    width: 1px;
+    height: 10px;           /*선의 세로값*/
+    background: #fff;     /*위드헤이트줬으니 백그라운드로 컬러*/
+    margin: 0 5px;   /*사이 간격*/
+}
+
+.lineNone li:first-child::before{
+    display: none;
+}
+
+.fMenu li a{
+    color: #fff;
+}
+
+.csFamily{float: right;}
+.csFamily>div{
+    float: left;     /*패밀리사이트가 또 옆으로 부모도 플루트 먹어서 ㅇㅋ*/
+    height: 40px;
+    padding: 0 15px;
+}
+.csBox{
+    background: 2a3033;
+}
+.csBox span{
+    vertical-align: middle;
+}
+.csBox .num{
+    font-size: 22px;
+    margin-left: 10px;
+}
+#footer a{color: #fff;}
+.familyBox{
+    background:#fff url(../images/arrow.png)no-repeat 95% center;/*url를 먼저쓰고 컬러 95는 위치변경*/
+    color: #333;
+    margin-left: 10px;     /*패딩주몀안대 아까 패딩한번더줬자나*/
+    width: 150px;          /*패밀리사이트글씨때문에 위드값이주어짐*/
+    
+}
+
+.fBottom{
+    background: #4c5459;
+    text-align: center;
+    padding: 70px 0;     /*위아래여백*/
+}
+.fBottom p{margin: 10px 0;}
+.fLogo{
+    width: 130px;
+    height: 50px;
+    background: url(../images/sp_com.png)no-repeat -150px 0;
+    margin: 0 auto;
+    text-indent: -9999px;   /*글씨야 바이바이*/
+    margin-bottom: 30px;
+}
+.fInfo{}
+.fInfo span::after{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    margin: 0 5px;
+    background: #fff;
+}
+
+.fInfo span:last-child::after{display: none;}

@@ -1,0 +1,257 @@
+@charset "utf-8";
+
+/*전체 안보임*/
+.panel,.mCon03Menu04,.mMainCon04{
+    display: none;    /*1두개 다 안보이게한다*/
+}
+
+@media screen and (max-width:768px){            /*768px이면 태블릿까지 모바일화면*/
+     /*모바일세팅*/
+    body{min-width: auto;}
+        .inner{
+            width: auto;
+            margin: 0;
+        }
+    /*모바일뷰에서 안보임*/
+    .gnb,.util,.mainCon02,.con03Menu04,.mainCon04,.con05Menu li p,.fLogo,.fInfo{display: none;}   
+    
+    /*모바일뷰에서 보임*/
+    .panel,.mCon03Menu04,.mMainCon04{display: block;}     /*2모바일에서만 보이게한다*/
+    
+    /*이미지사이즈변경*/
+    #header h1,.panel,.sliderBtn,.con01List li span{
+    background-size: 400px !important;       /*에스피컴에 들어가는 사이즈는 딱 반토막/important로 백그라운드사이즈가 먹히게 한다*/
+    }
+    
+    /*header*/
+    #header{
+        height: auto;   /*웹에서 헤이트43px을 준것을 다시 복귀*/
+        margin: 10px 20px;
+    }
+    #header h1{
+        width: 70px;
+        height: 28px;
+        background-position: 0 0;   /*이미지초기화*/
+        position: static;   /*기본값/앱솔루트 안띄어짐*/
+    }
+    .panel{
+        width: 16px;
+        height: 16px;
+        background: url(../images/sp_com.png) -227px -97px;   /*400이즈에서 움직이는 수치임*/
+        text-indent: -9999px;
+        position: absolute;
+        right: 0;
+        top:6px;   /*로고가 29px에 메뉴바16px 29-16=12 그중에 반(6)*/
+    }
+    .panel a{
+        display: block;
+        height: 100%;
+    }
+    
+    /*메인배너*/
+    .mainSlider{
+        margin: 0;
+        height: auto;  /*헤이트가 내 자식만큼 잡아지게 했어 결국엔말야*/
+        padding: 45% 0;
+    }
+    .sliderTxt{
+        padding-top: 0;   /*패딩탑을 없애기*/
+    }
+    .sliderTxt h2{
+        font-size:14px; 
+        font-family: 'NotoSans',sans-serif;
+        font-weight: bold;
+    }
+    .sliderTxt p{
+        font-size: 11px;
+    }
+    .sliderBtn{
+        width: 13px;
+        height: 23px;
+        background-position: -64px -30px;
+        margin-top: -12px;
+    }
+    
+    .prevBtn{
+        left: 10px;    /*버튼을 왼쪽으로 10px 움직이게 하자*/
+    }
+    .nextBtn{
+        right: 10px;
+        background-position: -79px -30px;
+    }
+    /*메인컨01*/
+    .mainCon01{
+        padding: 20px 0;
+    }
+    .con01List{
+        display: block;   /*2부모가 인라인블락이어서 화면상의 33.33%씩 먹질 않아서 블락을 준다*/
+        overflow: hidden;   /*3li한테 플루트렙프트를줬는데 우리가cf를 안줘서 그냥 오버플로우주기*/
+    }
+    .con01List li{
+        width: 33.33%; /*1가로로 3개의 컨텐츠가 있으면 33.33%주야한다*/
+        margin: 0;
+        padding: 10px 0; /*마진바텀을 주면 메인컨01한테 준 패딩값 위아래 틀려지니까*/
+    }
+    .con01List li span{
+    width: 33px;       /*컨텐츠마다의 크기*/
+    height: 33px;
+    margin: 0 auto; /*4블락이어서 중간정렬*/
+    }
+    .con01List li:hover span,.con01List li:hover .con01Icon06{
+        background-position-y:-57px; /*호버한것을 원상복귀/con01ICon06을 따로쓰는이유는 y값이 틀렸기때문에 따로 클래스명을 웹상에서 주었기때문에 이길려면 다시불러봐야한다. span으로 불러오면 또 집니다*/
+    }
+    
+    .con01List li:hover .con01Icon03{
+        background-position-y:-55px;  /*호버한것을 원상복귀*/
+    }
+    .con01List li:hover p{
+        color: #333;
+    }
+    .con01Icon01{
+        background-position: -1px -57px;
+    }
+    .con01Icon02{
+        background-position: -37px -57px;
+    }
+    .con01Icon03{
+        background-position: -75px -55px;
+    }
+    .con01Icon04{
+        background-position: -109px -57px;
+    }
+    .con01Icon05{
+        background-position: -145px -57px;
+    }
+    
+    .con01Icon06{
+        background-position: -181px -57px;
+    }
+    
+    /*메인컨03*/
+    .mainCon03{
+        padding: 0 10px;
+    }
+    .con03Grid{
+        width: calc(50% - 5px);
+        height: auto;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        position: relative;
+    }
+    .con03Grid:nth-child(2n){margin-right: 0;}
+    .con03Grid::after{
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+    }
+    .con03Grid:hover p{display: none;}  /*호버했을때 나오는 p태그를 삭제*/
+    .con03Grid a{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .con03Grid h3{
+        padding-top: 0;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translate(0,-50%);
+        font-size: 15px;
+    }
+    .mCon03Menu04{
+        padding: 0;
+        background: none;
+        margin-right: 0;
+    }
+    .mCon03Menu04{
+        margin-bottom: 0;}
+    /*메인컨04*/
+    .mMainCon04 dl{
+        margin: 0 10px 10px 10px; 
+        background: #f2f0ed;
+        height: 45px;
+        line-height: 45px;
+        font-size: 13px;
+    }
+    .mMainCon04 dt{
+        width: 20%;
+        display: inline-block; /*가로값이 있어야지 두개 붙어*/
+        text-align: center;
+        vertical-align: middle;
+        color: #2d5b79;
+        font-weight: bold;
+    }
+    .mMainCon04 dd{
+        width: 75%;        /*80%를 주면 인라인여백때문에 옆으로 안올라와*/
+        display: inline-block;
+        vertical-align: middle;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        
+    }     /*에이태그한테 블락을 주면 a태그한테 점처리를 해야한다 a태그한테 블락안줄거면 dd한테 직접주면된다*/
+    
+    /*mainCon05*/
+    .mainCon05{
+        padding: 20px 10px; /**/
+        padding-bottom: 10px; /*li에 마진바텀을 10픽셀을 줘서 밑에 라인이 위에가 틀린 여백을 가지게 되어서 마진바텀을 10픽셀만 준다*/
+    }
+    .con05Menu li{
+        width: calc(50% - 5px);
+        margin-right: 10px;
+        height: auto;
+        margin-bottom: 10px;
+        background-size: 100% 100%; /*선을 다보이기 위해서 세로에도 100퍼 평소에는 줄 필요업어*/
+    }
+    .con05Menu li:nth-child(2n){margin-right: 0;}
+    .con05Menu li h3{
+        padding: 70% 0 20% 0;
+        font-size: 15px;
+    }
+    
+    /*푸터*/
+    .fMenu{
+        width: 100%;                  /*1화면이 가득차게 일단 위드 100퍼 그러면 일단 두줄이됨 블락이면 위드100퍼가 필요없다? 고로 플루트논이니까 위드100퍼가 필요없다?*/
+        text-align: center; /*4부모한테 텍스트 언라인줘서 중간정렬*/
+        line-height: 30px; /*5두줄의 여백이 큰 이유는 웹상에서 우리가 먼저 45px를 줘서이다 그 여백이 커서 싫으면 여기서 줄이자*/
+        
+    }
+    .fMenu li{
+        float: none;  /*2 플루트를 일단 없애기*/
+        display: inline-block; /*3인라인블락을 줄려고 위에 디스플레이논을 준거다*/
+        
+    }
+    .fMenu li:first-child::before{
+        display: none;/*4두번째 줄 앞에 선 없애기*/
+    }
+    .csFamily{
+        width: 100%;
+        text-align: center;
+        
+    }/*플루트라이트가 먹고있어서 계속 오른쪽으로 이동*/
+    .csFamily>div{
+        float: none; 
+        display: inline-block;
+        box-sizing: border-box;}/*패딩이 기존에 있어서 박스사이징으로 안으로 먹기하자*/
+    .csBox{
+        width: 50%;
+    }
+    .csBox .num{
+        font-size: 13px;
+        margin-top: 0;
+    }
+    .familyBox{
+        width: 35%;
+        text-align: left;   /*중앙정렬이되면 안되고 왼쪽으로 치우쳐야지*/
+        font-size: 11px;
+    }
+    .fBottom{
+        padding: 20px 0;
+    }
+}
+
+/*아이폰5이외 작은폰*/
+@media screen and (max-width:320px){
+    #footer{letter-spacing: -2px;}
+}
+    

@@ -1,0 +1,431 @@
+@charset "utf-8";
+
+/*메인슬라이더*/
+.mainSlider{
+   background: url(../images/main_img.jpg) no-repeat center center;
+   height: 690px;
+   margin: 0 50px;    /*패딩을 주면 백그라운드가 넓혀진다*/
+   background-size: cover;  
+   color: #fff;
+   text-align: center;
+   position: relative;
+
+}
+
+.sliderTxt{
+    padding-top: 278px;
+}
+.sliderTxt h2{
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+.sliderTxt h2 span{
+    display: block;
+}
+.sliderTxt p{
+    font-size: 20px;
+}
+.sliderBtn{
+    width: 25px;
+    height: 45px;
+    background: url(../images/sp_com.png)no-repeat -128px -61px;
+    text-indent: -9999px;
+    position: absolute;
+    top:50%;
+    margin-top: -23px;
+}
+.sliderBtn a{
+    display: block;
+    height: 100%;   /*원래 글씨영역이 애초부터 작았기에 100%를 주야한다*/
+}
+.prevBtn{
+    left: 30px;    
+}
+.nextBtn{
+    background-position: -159px -61px;   /*위치값만 바꿔줄려면 무조건 포지션을 넣어주야함*/
+    right: 30px;
+}
+
+/*메인컨텐츠01*/
+.mainCon01{
+    text-align: center;
+    padding: 50px 0;
+}
+
+.con01List{
+    display: inline-block;
+}
+
+.con01List{}
+
+.con01List li{
+    float: left;
+    font-size: 13px;
+    margin: 0 50px;
+}
+/*컨텐츠01호버*/
+
+.con01List li:hover span{
+    background-position-y:-184px;   /*통채로사진이 등록되어있기에 y값만 바뀌면 된다 단 빨강색으로 뜨는것은 무시해도ok*/
+}
+
+
+.con01List li:hover .con01Icon06{
+    background-position-y:-183px;
+}
+
+.con01List li:hover p{    
+    color: #2d5b79;        /*a태그안에 p가 있으니 p한테 줘도 ok*/  
+}
+
+
+.con01List li a{}
+.con01List li span{
+    display: block;
+    width: 64px;
+    height: 52px;
+    background-image: url(../images/sp_com.png);/*repeat는 백그라운드일때만 쓸수 있다 지금의 경우는 백그라운드 이미지이기때문이다.*/
+    text-indent: -9999px;
+    margin-bottom: 20px;
+}
+.con01List li p{}
+
+.con01Icon01{background-position: -3px -118px;}
+.con01Icon02{background-position: -74px -118px;}
+.con01Icon03{background-position: -147px -118px;}
+.con01Icon04{background-position: -219px -118px;}
+.con01Icon05{background-position: -291px -118px;}
+.con01Icon06{background-position: -362px -117px;}
+
+/* 메인컨텐츠02*/
+
+.mainCon02{
+    background: #dfd9d1;
+    padding: 50px 0;
+    margin-bottom: 50px;
+    
+}
+.con02Tit{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.con02Tit h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.con02Tit p{
+}
+
+.con02Box{
+    position: relative;
+}
+.con02Box>div{
+    float: left;
+}                       /* 첫번째만잇는 자식*/
+
+.con02Left{
+    position: relative;
+}
+.con02Left img{
+    display: block; /*이미지가 인라인여서 공백있어서*/
+}
+.leftTxt{
+    position: absolute;
+    top:0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    height: 100%;              /*다차게했어*/
+    width: 240px;
+    padding: 30px 15px;     /*헤이트 위드 값이 있어서 패딩을 줘서 늘어남 해결방법은 박스사이징*/
+    box-sizing: border-box;    /*박스안에 쏙들어가기*/
+}
+.leftTxt h4{
+    font-size:13px;
+}
+.leftTxt p{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.leftTxt p span{
+    font-weight: bold;
+}
+.leftTxt .lastTxt{
+    font-size: 13px;
+}
+.moreBtn{
+    width: 210px;     /*양옆에 패딩값을 뺀 나머지 위에 letfTxt에서 양옆 15픽셀있어 앱솔루트 있으면 패딩도 다같이 뜬다 그니까 위드에서 -30값을 적어주자*/
+    position: absolute;       
+    bottom: 30px;
+    border: 1px solid #fff;
+    text-align: center;
+    font-size: 13px;
+    height: 40px;      
+    line-height: 40px;
+}
+.moreBtn a{
+    color: #fff;
+    display: block;
+    
+}
+/*호버*/
+
+.moreBtn a:hover{
+    background: #fff;    /*배경색*/
+    color: #333;        /*글씨색*/
+}
+
+
+.con02Right{
+    background: #fff;
+    width: 400px;   /*백퍼를 주면 부모사이즈를 다먹어버린다*/
+    height: 430px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.con02Right ul{}
+.con02Right li{
+    padding-top: 22px;
+}
+.con02Right li a{}
+.con02Right li img{
+    width: 80px;
+    vertical-align: middle;
+}
+.listInfo{
+    display: inline-block;
+    vertical-align: middle;
+}
+.listInfo p{
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.con02Box .prevBtn{
+    left: -50px;
+}
+.con02Box .nextBtn{
+    right: -50px;
+}
+
+/*메인컨텐츠03*/
+
+.mainCon03{}
+
+.con03Grid{
+    width: 285px;
+    height: 285px;
+    text-align: center;
+    background: url(../images/mainrow3_img1.jpg)no-repeat;
+    background-size:100%;
+    float: left;
+    margin-right: 20px;
+}
+
+.con03Menu02{background-image: url(../images/mainrow3_img2.jpg)}
+.con03Menu03{background-image: url(../images/mainrow3_img3.jpg)}
+.con03Menu04{background:#f2f0ed;      /*백그라운드 컬러라고 적으면 백그라운드 속성을 받는다*/
+    margin-right: 0;}
+   
+/*호버*/
+.con03Menu01 p{
+    margin-top: 15px;
+    color: #fff;
+    display: none;
+}   
+.con03Menu01:hover p{
+    display: block;
+}   
+.con03Menu01:hover a{
+    background:  rgba(45,91,121,0.5);  /*이미지로 사진등록인경우 앱솔루트로 띄어서 중앙정렬은 위드100%*/
+    
+}
+
+
+
+.con03Menu04{
+    padding: 30px 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+.con03Grid a{
+    display: block;
+    height: 100%     /*100퍼안주면 밑에 링크안걸림*/
+}
+.con03Grid h3{
+    padding-top: 100px;    /*패딩을 주면 텍스트가 밑으로 내려옴*/
+}    
+
+.con03Menu04 h3{
+    padding-top: 0;
+    margin-bottom: 30px;
+}
+
+.con03Menu01 h3,.con03Menu03 h3{color: #fff;}    /*글씨 색 흰색으로 바꾸기*/
+
+.con03Menu04 select,.con03Menu04 input,.con03Menu04 button{
+    appearance:none;                    /*효과삭제*/
+    -wekit-appearance:none;
+    border: 0;                          /*선업애기*/
+    width: 100%;     /*하나당 100퍼센트가되니까 떨어짐*/
+    display: block;
+    height: 45px;
+    box-sizing: border-box;    /*인풋에는 패딩이 있어서 박스사이징줘서 딱 맞게*/
+    margin-top: 10px;
+    padding: 0 15px; /*글씨쓸때랑 끝날때 여백*/
+    outline: none; /*눌럿을때선없애기*/
+    cursor: pointer; /*손모양*/
+}
+
+.con03Menu04 select{
+    background: url(../images/arrow.png)no-repeat 95% center; /*center 세로에서 중앙*/
+    background-color: #fff           /*위에가 안먹히니 일부러 컬러까지 적음*/
+    
+}
+.con03Menu04 input{}
+.con03Menu04 select::-ma-expand{display: none;} /*익스플로러로 적용할수있게*/
+.con03Menu04 button{
+    width: 245px;
+    background: #2d5b79;
+    color: #fff;
+    position: absolute;
+    left: 20px;
+    bottom: 30px;
+}
+
+/*메인컨텐츠04*/
+
+.mainCon04{
+    margin-top:20px ;
+    margin-bottom: 20px;
+    
+}
+
+.con04Box{
+    width: 590px;           
+    background: #F1EFEC;
+    float: left;
+    margin-right: 20px;
+    box-sizing:border-box;
+}
+
+.con04Tit{
+    text-align: center;     /*텍스트 중앙정렬*/
+    font-size: 20px;
+    height: 60px;
+    line-height: 60px;    /*헤이트랑 세트:한줄정렬*/
+    color: #2d5b79;     /*텍스트컬러*/
+    position: relative;        /*앱솔루트야 con04Tit안에서만 놀거라*/
+    border-bottom: 1px solid #fff; /*공지도형 밑에 선을 주기 */
+}
+.con04Tit h3{}
+.plusBtn{
+    width: 32px;                    /*플러스모양 가로값*/
+    height: 32px;                   /*플러스모양 세로값*/
+    background:#fff url(../images/sp_com.png)no-repeat -195px -59px;   /*사진과 중복no x y값*/
+    text-indent:-9999px;
+    position: absolute;
+    top:15px;                   /*앱솔루트로 띄어서 플러스 위치*/
+    right:14px;                 /*앱솔루트로 띄어서 플러스 위치*/
+    border-radius: 50%;      /*플러스모양 동그랗게*/     
+    
+}
+.plusBtn a{
+    display: block;     /*plusBtn에 text-indent를 줘서 a속성도 같이 날아가서 a태그 링크안걸림->블락줌*/
+}
+
+.con04Box ul{}
+.con04Box li{}
+.con04Box li a{}
+.con04Box li p{
+    font-size: 14px;
+    width: 100%;   /*p안에서 100%*/
+    white-space: nowrap;   /*줌바꿈안되고 한줄로표시*/
+    overflow: hidden;   /*가로값이 있어야 니가 여기에 나가면 ...점처리해줄게*/
+    text-overflow: ellipsis; /*글씨가 튀어난간거...점처리해줄게*/
+}
+.con04Box li span{
+    font-size: 12px;
+    color: #999;
+    padding: 10px 0;
+    display: block;
+}
+
+
+.noticeList li {
+    width: 50%;                /*텍스트를 나누기 반반 그래서 %를 사용*/
+    height: 137px;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;  /*넘쳐서*/
+    border-right: 3px solid #fff;
+}  
+
+
+/*호버*/
+.con04Box li a:hover,.con04Box li a:hover span{
+    text-decoration: underline;   /*호버하면 줄이 나옴/스판은 앱솔루트로 띄어서 적용불가해서 따로 한번 더 적어준다*/
+}
+
+
+.news{margin-right:0;}
+
+.news li{
+    height: 45px;
+    line-height: 45px;
+    padding: 0 15px;
+    border-bottom: 1px solid #fff;
+}
+.con04Box li:last-child{border: 0;}
+.news li a{
+    position: relative;
+    display: block;
+}
+
+.news li p{
+    width: 70%;
+}
+.news li span{
+    position: absolute;
+    right: 0;
+    top:0;
+    padding: 0;        /*위아래 패딩빼*/
+}
+
+/*메인컨텐츠05*/
+
+.mainCon05{
+    background: url(../images/mainrow4_bg.jpg)no-repeat center center; /*커버를 해도 중간으로*/
+    background-size: cover;   /*화면이 옆에 짤려버린다 그렇기에 커버*/
+    padding: 50px 0;    /*마진을 주면 그냥 여백이 생겨버린다*/
+}
+
+.con05Menu{}
+.con05Menu li{
+    width: 285px;     
+    height: 397px;
+    float: left;
+    text-align: center;
+    background-size:100%; /*이미지가 작았기에 옆으로 여백생겨서 딱맞게*/
+    margin-right:20px;
+}
+
+.con05Menu01{background-image: url(../images/mainrow5_img1.jpg);}
+.con05Menu02{background-image: url(../images/mainrow5_img2.jpg);}
+.con05Menu03{background-image: url(../images/mainrow5_img3.jpg);}
+li.con05Menu04{background-image: url(../images/mainrow5_img4.jpg.jpg); /*나와같은라인중에 같은애*/
+    margin-right: 0;}
+
+.con05Menu li a{
+    display: block;
+    height: 100%;
+}
+.con05Menu li h3{
+    padding-top: 320px;
+    font-size: 20px;
+}
+.con05Menu li p{
+    font-size: 14px;
+}
